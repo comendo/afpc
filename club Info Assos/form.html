@@ -1,0 +1,181 @@
+<ion-view view-title="Ajouter/modifier prospect">
+  <ion-content>
+<div class="list">
+<form>
+  <label class="item item-input">
+    <span class="input-label">Nom :</span>
+    <input ng-model="prospect[1]" type="text" placeholder="Nom">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Prenom :</span>
+    <input ng-model="prospect[2]" type="text" placeholder="Prenom">
+  </label>
+  <div class="item-divider">
+      Echange:
+    </div>
+	<ion-item>
+	  <ion-label>Téléphonique</ion-label>
+	  <ion-checkbox color="dark" ng-checked="prospect[3]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>Physique</ion-label>
+	  <ion-checkbox color="dark" ng-checked="prospect[3]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>E-mail</ion-label>
+	  <ion-checkbox color="red" ng-checked="prospect[3]"></ion-checkbox>
+	</ion-item>
+	<div class="item-divider">
+      Raison social de l'association/entreprise
+    </div>
+    <label class="item item-input">
+  	<span class="input-label">Adresse :</span>
+    <input ng-model="prospect[4]" type="text" placeholder="Adresse">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">T&eacute;l&eacute;phone :</span>
+    <input ng-model="prospect[5]" type="text" placeholder="T&eacute;l&eacute;phone">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">FAX :</span>
+    <input ng-model="prospect[6]" type="text" placeholder="Fax">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">E-mail :</span>
+    <input ng-model="prospect[7]" type="text" placeholder="E-mail">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Responsable :</span>
+    <input ng-model="prospect[8]" type="text" placeholder="Responsable">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Interlocuteur :</span>
+    <input ng-model="prospect[9]" type="text" placeholder="Interlocuteur">
+  </label>
+   <label class="item item-input">
+  	<span class="input-label">Année de création de la société :</span>
+    <input ng-model="prospect[10]" type="date">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Effectif salariés :</span>
+    <input ng-model="prospect[11]" type="number">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Activité :</span>
+    <input ng-model="prospect[12]" type="text">
+  </label>
+  <div class="item-divider">
+      Adhérent à:
+    </div>
+	<ion-item>
+	  <ion-label>Uniformation GPE</ion-label>
+	  <ion-checkbox color="dark" ng-checked="prospect[13]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>AGEFOS PME AG</ion-label>
+	  <ion-checkbox color="dark" ng-checked="prospect[13]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>OPCALIA Guadeloupe</ion-label>
+	  <ion-checkbox color="red" ng-checked="prospect[13]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>autre:</ion-label>
+	  <input ng-model="prospect[13]" type="text">
+	</ion-item>
+	<label class="item item-input">
+    <span class="input-label">à jour de ses cotisations:</span>
+    <ion-radio ng-model="prospect[14]" ng-value="'true'">Oui</ion-radio>
+  	<ion-radio ng-model="prospect[14]" ng-value="'false'">Non</ion-radio>
+  </label>
+	
+  <div class="item-divider">
+      Financements possibles:
+    </div>
+	<ion-item>
+	  <ion-label>PDF</ion-label>
+	  <ion-checkbox color="dark" ng-checked="prospect[15]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>DIF</ion-label>
+	  <ion-checkbox color="dark" ng-checked="prospect[15]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>Période de pro</ion-label>
+	  <ion-checkbox color="red" ng-checked="prospect[15]"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+	  <ion-label>Contrat de pro</ion-label>
+	  <ion-checkbox color="red" ng-checked="prospect[15]"></ion-checkbox>
+	</ion-item>
+	<div class="item-divider">
+      Analyse du besoin
+    </div>
+    <label class="item item-input">
+      <span class="input-label">Le demandeur :</span>
+      <input ng-model="prospect[16]" type="text" placeholder="Le demandeur">
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Le client :</span>
+      <input ng-model="prospect[17]" type="text" placeholder="Le client">
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Les besoins des futurs formés :</span>
+      <textarea ng-model="prospect[18]" type="text"></textarea>
+    </label>
+  
+    <div class="item-divider">
+      Synthèse de l'entretien
+    </div>
+    <label class="item item-input">
+      <span class="input-label">Quand?</span>
+      <textarea ng-model="prospect[19]" type="text"></textarea>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Quoi?</span>
+      <textarea ng-model="prospect[20]" type="text"></textarea>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Qui?</span>
+      <textarea ng-model="prospect[21]" type="text"></textarea>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Comment?</span>
+      <textarea ng-model="prospect[22]" type="text"></textarea>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Où?</span>
+      <textarea ng-model="prospect[23]" type="text"></textarea>
+    </label>
+    <label class="item item-input">
+	  <span class="input-label">Fait où :</span>
+	   <input ng-model="prospect[24]" type="text" placeholder="Fait à">
+	</label>
+	<label class="item item-input">
+	  <span class="input-label">Fait quand :</span>
+	  <input ng-model="prospect[25]" type="date">
+	</label>
+	<label class="item item-input">
+	  <span class="input-label">Nom consultant :</span>
+    <input ng-model="prospect[26]" type="text"  placeholder="Consultant">
+  </label>
+  <label class="item item-input">
+    <div class="padding item item-input">
+		<button type="button" class="button button-block button-positive" id="submit" ng-click="submitForm(prospect)">Valider</button>
+	</div>
+  </label> 
+</form>
+</div>   
+  </ion-content> 
+<div class="tabs">
+  <a class="tab-item" href="#app/prospects/all">
+    Liste prospects
+  </a>
+  <a class="tab-item" href="#app/prospects/{{id}}/details">
+    D&eacute;tails
+  </a>
+ <!-- <a class="tab-item" ng-click="test()">  
+    Imprimer
+  </a>-->
+</div>
+</ion-view>

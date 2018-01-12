@@ -1,0 +1,36 @@
+<ion-view view-title="Ajouter abonn&eacute;">
+  <ion-content>
+<div class="list">
+<form>
+  <label class="item item-input">
+    <span class="input-label">Nom :</span>
+    <input ng-model="abonne[0]" type="text" placeholder="Nom">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Prenom :</span>
+    <input ng-model="abonne[1]" type="text" placeholder="Prenom">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Association :</span>
+    <input ng-model="abonne[2]" type="text" placeholder="Association">
+  </label>
+  <label class="item item-input">
+    <div class="padding item item-input">
+		<button type="button" class="button button-block button-positive" id="submit" ng-click="submitForm(abonne)">Valider</button>
+	</div>
+  </label> 
+</form>
+</div>   
+  </ion-content> 
+<div class="tabs">
+  <a class="tab-item" href="#app/abonnes/all">
+    Liste abonn&eacute;s
+  </a>
+  <a class="tab-item" href="#app/abonnes/{{ abonne.id}}/details">
+    D&eacute;tails
+  </a>
+  <a class="tab-item" ng-click="test()">  
+    Imprimer
+  </a>
+</div>
+</ion-view>

@@ -1,0 +1,44 @@
+<ion-view view-title="Ajouter utilisateur">
+  <ion-content>
+<div class="list">
+<form>
+  <label class="item item-input">
+    <span class="input-label">Nom :</span>
+    <input ng-model="user.nom" type="text" placeholder="Nom">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Prenom :</span>
+    <input ng-model="user.prenom" type="text" placeholder="Prenom">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Ecole :</span>
+    <input ng-model="user.ecole" type="text" placeholder="Ecole">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Classe :</span>
+    <input ng-model="user.classe" type="text" placeholder="Classe">
+  </label>
+  <label class="item item-input">
+  	<span class="input-label">Age :</span>
+    <input ng-model="user.age" type="number" placeholder="Age">
+  </label>
+  <label class="item item-input">
+    <div class="padding item item-input">
+		<button type="button" class="button button-block button-positive" id="submit" ng-click="submitForm(user)">Valider</button>
+	</div>
+  </label> 
+</form>
+</div>   
+  </ion-content> 
+<div class="tabs">
+  <a class="tab-item" href="#app/users/all">
+    Liste utilisateurs
+  </a>
+  <a class="tab-item" href="#app/users/{{ user.id}}/details">
+    D&eacute;tails
+  </a>
+  <a class="tab-item" ng-click="test()">  
+    Imprimer
+  </a>
+</div>
+</ion-view>

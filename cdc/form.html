@@ -1,0 +1,25 @@
+<ion-view view-title="Ajouter/modifier cahier des charges">
+  <ion-content>
+<div class="list">
+<form>
+  <label class="item item-input" ng-repeat="(k,v) in label">
+    <span class="input-label">{{v}} :</span>
+    <input ng-model="cdc[k]" type="text" placeholder="{{v}}" ng-change="hydrate(cdc)">
+  </label>
+  <label class="item item-input">
+    <div class="padding item item-input">
+		<button type="button" class="button button-block button-positive" id="submit" ng-click="submitForm(cdc)">Valider</button>
+	</div>
+  </label> 
+</form>
+</div>   
+  </ion-content> 
+<div class="tabs">
+  <a class="tab-item" href="#app/cdc/all">
+    Liste cahier des charges
+  </a>
+  <a class="tab-item" href="#app/cdc/{{id}}/details">
+    D&eacute;tails
+  </a>
+</div>
+</ion-view>

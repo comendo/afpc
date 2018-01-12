@@ -1,0 +1,61 @@
+<ion-view view-title="Liste {{ module }}">
+  <ion-content>
+    <ion-list>
+    	<div class="item row"> 
+          <div class="col">Liste {{ module }}</div>
+          <div class="col"></div>
+        </div>
+	    <div style="padding: 0px 15px;" class="table-container responsive-sm">
+			<!--<h1> {{'titleSearch' | translate}}</h1>-->
+			<div class="row">
+				<input class="noprint recherche col-50" type="search" ng-model="filtre1" placeholder="Rechercher par">
+				<input class="noprint recherche col-50" type="search" ng-model="filtre2" placeholder="et Rechercher par">
+			</div>
+			<div class="row">
+				<div class="g-signin2" data-onsuccess="onSignIn"></div>
+			</div> 
+		</div> 
+		<div style="padding: 0px 15px;"  class="table-container responsive-sm">
+			<div ng-controller="cdcAllCtrl as demo" class="table">
+				<ul class="list-inline row fleche" ng-cloak> 
+		       		<li class="col" ng-repeat="col in demo.cols track by col.title" style="min-width: 100px">
+		          		<center><a class="fleche_gauche" href="" ng-click="demo.move(col,$index,-1)">
+		            		<span ng-show="!$first" class="glyphicon glyphicon-arrow-left"></span>
+		            		<span ng-show="$first" style="width: 10px;height: 10px;"></span>
+		          		</a>
+		          		<input type="checkbox" ng-model="col.show"/>
+		          		<a class="fleche_droite" href="" ng-click="demo.move(col,$index, 1)">
+		            		<span ng-show="!$last" class="glyphicon glyphicon-arrow-right"></span> 
+		         		</a></center>
+		         		<center>{{col.title}}</center>
+		        	</li> 
+		      	</ul>
+		      	<hr> 
+				<div id="imp_tableau">
+				<!--<img alt="" src="img/image00.png" style="width: 78.55px; height: 84.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+				<img alt="" src="img/image01.png" style="width: 78.55px; height: 84.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+				--><table ng-table-dynamic="demo.tableParams with demo.cols" class="table table-condensed table-bordered table-striped">
+		        	<tr ng-repeat="row in simpleList | filter:filtre1 | filter:filtre2" class="ligne">		   
+		          		<td ng-repeat="col in $columns" ng-click="details(row['id'])" title="{{ row[col.field] }}">
+			          		<!--<span ng-if="col.field == 'numero'">{{ $index + 1 }}</span>-->			      
+			          		<span>{{ row[col.field] }}</span>
+          				</td>
+		        	</tr>
+		    	</table>
+		    	</div>
+			</div>
+		</div>
+    </ion-list>
+  </ion-content>
+  <div class="tabs">
+  <a class="tab-item" href="#app/home">
+    Accueil
+  </a>
+  <a class="tab-item button-full button-positive" href="#app/cdc/add">
+     Ajouter un cahier des charges
+  </a>
+  <a class="tab-item" ng-click="cndPrint('tout')">  
+    Imprimer 
+  </a>
+  </div>
+</ion-view>
